@@ -1,0 +1,56 @@
+:global {
+  @import 'base';
+  @import 'vendor/normalize';
+
+  // Some best-practice CSS that's useful for most apps
+  // Just remove them if they're not what you want
+  html {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    outline: none;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  ::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .54
+  }
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+}

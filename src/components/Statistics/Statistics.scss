@@ -1,0 +1,30 @@
+.head {
+  padding: 10px;
+  background-color: grey;
+  display: flex;
+
+  h3 {
+    color: #fff;
+    flex: 1;
+    margin: 10px 0;
+    text-align: left;
+  }
+}
+
+.statistic {
+  width: 90px;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 14px;
+
+  .count {
+    font-weight: bold;
+  }
+
+  .desc {
+    color: lightgray;
+  }
+  span {
+    display: block;
+  }
+}

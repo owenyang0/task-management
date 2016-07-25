@@ -1,0 +1,21 @@
+@import 'utils';
+
+.wrapper {
+  @include cf();
+  padding-bottom: 20px;
+}
+
+.column {
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include breakpoint(680px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
