@@ -1,0 +1,25 @@
+sudo: false
+language: node_js
+node_js:
+  - "5"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - NODE_ENV=production npm run deploy
+
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: k6lfDFk9YIk903/gasEVZu7WomfRcD+HZdQEwXnfcFzjYC1L+5Upa1e2P1H/BM5UhBoxYPR+xnNN/erKmFratLr4DNr6ruqCuY7YxEluqAq1gPqzD8CM65X4sZVQ3v3oMeZ76hE5Bg/gyo4D95wRs1Gz9CV6zEUjXXmGwZYEKFkl7KbYJJ4xQDtjBHJzyIvxuZHL9bLq8+XvfGS0qARB+opADY4r7cuEAa40vzU/0hwvK9gE5rysxmJ65Na5C55jNb1B2wnb6S6x0vB6WO5YG3oLJsog+k04dZ7ugvjZStSUPGCq+AsZhPrFOcJPmQcuigfWl9R+Ixe2kNRu2uoc6HzXD4PgniAdf1erHmAf4ICMhG7wAuHXbalaQiMHy/gGQwUMfEzoRMFbPO5T82IslaAo5HtCuUgiRSMuq1V/dRS1h7lXJgO714P6m7LjsUUp3XMwlcOF3GptBjvw92EuSGcF0Z80HC6ZnOnQwgaD5H2zYlmsJZv8VU6jJeas+bjsIhJuOo/dTwHJgQ8l3WJLWSmEwOnEnHx6voGQ9g2uGZ+cPyrUeoZjxlZm64Pz737i4DqRrfcUDs6LSYf0KKohTL7KVdZXDpfYzpqLAbta+Cbvdkq4XwQXNkWvfYv/qOsY7agF5i5YkoWCDO2IfJjbS1LUeGrfM25Vmylq4mwoThA=
+  app: task-manage
+  on:
+    repo: owenyang0/task-management
+    all_branches: true
